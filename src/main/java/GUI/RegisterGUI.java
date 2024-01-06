@@ -46,6 +46,11 @@ public class RegisterGUI extends javax.swing.JFrame {
 
         ButtonCancel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         ButtonCancel.setText("Cancel");
+        ButtonCancel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonCancelActionPerformed(evt);
+            }
+        });
 
         FieldPass.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -110,6 +115,12 @@ public class RegisterGUI extends javax.swing.JFrame {
     private void FieldPassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FieldPassActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_FieldPassActionPerformed
+
+    private void ButtonCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonCancelActionPerformed
+        
+        dispose();
+        
+    }//GEN-LAST:event_ButtonCancelActionPerformed
 
     /**
      * @param args the command line arguments

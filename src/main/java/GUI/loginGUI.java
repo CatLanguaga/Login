@@ -1,9 +1,10 @@
-
 package GUI;
 
 
-public class loginGUI extends javax.swing.JFrame {
 
+public class loginGUI extends javax.swing.JFrame {
+    
+    RegisterGUI register = new RegisterGUI();
 
     public loginGUI() {
         initComponents();
@@ -145,7 +146,9 @@ public class loginGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_ButtonClearActionPerformed
 
     private void RegisterButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegisterButtonActionPerformed
-        // TODO add your handling code here:
+        
+        register.setVisible(true);
+        
     }//GEN-LAST:event_RegisterButtonActionPerformed
 
 
