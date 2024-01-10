@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package GUI;
 
 
@@ -43,6 +40,11 @@ public class RegisterGUI extends javax.swing.JFrame {
 
         ButtonOK.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         ButtonOK.setText("OK");
+        ButtonOK.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonOKActionPerformed(evt);
+            }
+        });
 
         ButtonCancel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         ButtonCancel.setText("Cancel");
@@ -121,6 +123,14 @@ public class RegisterGUI extends javax.swing.JFrame {
         dispose();
         
     }//GEN-LAST:event_ButtonCancelActionPerformed
+
+    private void ButtonOKActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonOKActionPerformed
+        
+        
+        
+        
+        
+    }//GEN-LAST:event_ButtonOKActionPerformed
 
     /**
      * @param args the command line arguments
