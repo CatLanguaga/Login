@@ -1,6 +1,13 @@
 
 package GUI;
 
+import Database.User;
+import Logic.Control;
+import static java.awt.image.ImageObserver.HEIGHT;
+import java.util.Arrays;
+import java.util.Date;
+import javax.swing.JOptionPane;
+
 
 public class RegisterGUI extends javax.swing.JFrame {
 
@@ -126,7 +133,31 @@ public class RegisterGUI extends javax.swing.JFrame {
 
     private void ButtonOKActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonOKActionPerformed
         
+         //Compare empty fields
+        if(FieldUser.getText().isEmpty() || FieldPass.getText().isEmpty() || FieldPass2.getText().isEmpty()){
         
+            JOptionPane.showMessageDialog(null , "Uno de los campos esta vacio", "advertencia", HEIGHT);
+          
+        
+        //Compare password
+        } else if(!Arrays.equals(FieldPass.getPassword(), FieldPass2.getPassword())){
+
+            JOptionPane.showMessageDialog(null , "Las contraseñas tienen que coincidir", "advertencia", HEIGHT);
+        
+        //Confirmation message
+        }else{
+
+            JOptionPane.showMessageDialog(null,"Welcome " + FieldUser.getText());
+            
+            dispose();
+            
+        }
+        
+        Control c = new Control();
+        
+        User u = new User(FieldUser.getText(), FieldPass.getText().toString(), new Date());
+        
+        c.CreateUser(u);
         
         
         

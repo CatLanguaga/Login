@@ -22,8 +22,8 @@ public class User implements Serializable{
     @Temporal(TemporalType.DATE)
     private Date date;
 
-    public User(int id, String username, String password, Date date) {
-        this.id = id;
+    public User(String username, String password, Date date) {
+        
         this.username = username;
         this.password = password;
         this.date = date;

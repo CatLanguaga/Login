@@ -18,10 +18,9 @@ public class ContPersistence {
     
     public boolean login(String username, String pass){
         
-        
         EntityManager o = userjpa.getEntityManager();
         
-        Query Q = o.createQuery("select u.username, u.password FROM Usuario u where u.username = :username and u.password = :password");
+        Query Q = o.createQuery("select u.username, u.password FROM User u where u.username = :username and u.password = :password");
         
         Q.setParameter("username", username);
         
