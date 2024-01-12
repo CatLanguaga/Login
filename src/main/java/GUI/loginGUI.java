@@ -1,5 +1,8 @@
 package GUI;
 
+import static java.awt.image.ImageObserver.HEIGHT;
+import javax.swing.JOptionPane;
+
 
 
 public class loginGUI extends javax.swing.JFrame {
@@ -135,7 +138,23 @@ public class loginGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_FieldUserActionPerformed
 
     private void ButtonOKActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonOKActionPerformed
-        // TODO add your handling code here:
+        //Compare if the fiels are empty
+        if(FieldUser.getText().isEmpty() || FieldPass.getText().isEmpty()){
+        
+            JOptionPane.showMessageDialog(null , "One or all spaces are empty", "advertencia", HEIGHT);
+        
+        //Confirmation message
+        } else{
+            
+            if(con.login(FieldUser.getText(), FieldPass.getText().toString())){
+                
+                JOptionPane.showMessageDialog(null , "Problems in login", "advertencia", HEIGHT);
+                
+            } else{
+                
+                JOptionPane.showMessageDialog(null, "Welcome " + FieldUser.getText());
+            }
+        }
     }//GEN-LAST:event_ButtonOKActionPerformed
 
     private void ButtonClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonClearActionPerformed
@@ -148,6 +167,8 @@ public class loginGUI extends javax.swing.JFrame {
     private void RegisterButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegisterButtonActionPerformed
         
         register.setVisible(true);
+        
+        register.setLocationRelativeTo(null);
         
     }//GEN-LAST:event_RegisterButtonActionPerformed
 
