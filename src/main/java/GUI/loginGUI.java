@@ -1,5 +1,6 @@
 package GUI;
 
+import Persistence.ContPersistence;
 import static java.awt.image.ImageObserver.HEIGHT;
 import javax.swing.JOptionPane;
 
@@ -8,6 +9,8 @@ import javax.swing.JOptionPane;
 public class loginGUI extends javax.swing.JFrame {
     
     RegisterGUI register = new RegisterGUI();
+    
+    ContPersistence con;
 
     public loginGUI() {
         initComponents();
